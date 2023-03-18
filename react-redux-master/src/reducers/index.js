@@ -1,5 +1,3 @@
-// import {combineReducers} from 'redux'
-
 const counter = (state = 0, action) => {
     if(action.type === 'INCREMENT') {
         //Increase the value of the counter by the value of the value passed into the increment method
@@ -10,7 +8,4 @@ const counter = (state = 0, action) => {
     return state;
 }
 
-// const myReducers = combineReducers({counter});
-
-// export default myReducers;
 export default counter;

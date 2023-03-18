@@ -1,4 +1,4 @@
-import {combineReducers} from 'redux'
+// import {combineReducers} from 'redux'
 
 const counter = (state = 0, action) => {
     if(action.type === 'INCREMENT') {
@@ -10,6 +10,7 @@ const counter = (state = 0, action) => {
     return state;
 }
 
-const myReducers = combineReducers({counter});
+// const myReducers = combineReducers({counter});
 
-export default myReducers;
+// export default myReducers;
+export default counter;

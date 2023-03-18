@@ -4,13 +4,17 @@ import App from './App';
 // import * as serviceWorker from './serviceWorker';
 
 // import {createStore} from 'redux';
+import {configureStore } from '@reduxjs/toolkit'
 import {Provider} from 'react-redux'
-import myReducers from './reducers'
+// import myReducers from './reducers'
+import counter from './reducers'
 
-import { legacy_createStore as createStore } from 'redux';
+// import { legacy_createStore as createStore } from 'redux';
 
 //Create the store
-const myStore = createStore(myReducers);
+// const myStore = createStore(myReducers);
+// const myStore = configureStore({myReducers})
+const myStore = configureStore({reducer:{ counter}});
 
 //This will console log the current state everytime the state changes
 myStore.subscribe(()=>console.log(myStore.getState()));
